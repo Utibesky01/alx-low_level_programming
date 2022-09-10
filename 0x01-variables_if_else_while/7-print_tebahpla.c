@@ -9,7 +9,7 @@ int main(void)
 {
 	char c = 'z';
 
-	white(c >= 'a')
+	white (c >= 'a')
 	{
 		putchar(c);
 		c--;
