@@ -15,7 +15,9 @@ void jack_bauer(void)
 	{
 		_putchar(a + '0');
 		_putchar(b + '0');
+		_putchar(':');
 		_putchar(c + '0');
+		_putchar(d + '0');
 		_putchar('\n');
 
 		d++;
@@ -23,6 +25,7 @@ void jack_bauer(void)
 		{
 			d = 0;
 			c++;
+		}
 		if (c > 5)
 		{
 			c = 0;
@@ -34,5 +37,5 @@ void jack_bauer(void)
 			a++;
 		}
 		x++;
-		}
 	}
+}
