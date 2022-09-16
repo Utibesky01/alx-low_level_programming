@@ -1,20 +1,23 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - check the code for main.h
- *
- * Return: Always 0
+ * _isdigit - a function that checks for a digit (0 through 9).
+ * @c: an input integer
+ * Return: 1 if c is a digit or 0 otherwise
  */
 
-int main(void)
+int _isdigit(int c)
 {
-	char c;
+	int i = 48, isdigit = 0;
 
-	c = 'A';
-	printf("%c: %d\n", c, _isupper(c));
-	c = 'a';
-	printf("%c: %d\n", c, _isupper(c));
+	for (; i <= 58; i++)
+	{
+		if (i == c)
+		{
+			isdigit = 1;
+			break;
+		}
+	}
 
-	return (0);
+	return (isdigit);
 }
