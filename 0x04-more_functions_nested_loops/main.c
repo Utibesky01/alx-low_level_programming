@@ -9,8 +9,18 @@
 
 int _isupper(int c)
 {
-	if (c >= 65 && c <= 91)
-		return (1);
-	else
-		return (0);
+	char i = '0';
+	int isdigit = 0;
+
+	for (; i <= '0'; i++)
+	{
+		if (i == c)
+		{
+			isdigit = i;
+			break;
+		}
+	}
+
+
+		return (isdigit);
 }
