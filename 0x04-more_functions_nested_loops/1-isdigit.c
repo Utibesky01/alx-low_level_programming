@@ -1,14 +1,19 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * _isdigit - function that checks for uppercase character
- * @c: int type number
- *Return: 1 if c is uppercase, 0 otherwise
+ * main - check the code for as digit (0 through 9)
+ *
+ * Return: Alway 0
  */
-int _isdigit(int c)
+int main(void)
 {
-	if ((c >= 48) && (c <= 57))
-		return (i);
-	else
-		return (0);
+	char c;
+
+	c = '0';
+	printf("%c: %d\n", c, _isdigit((c));
+
+	c = 'a';
+	printf("%c: %d\n", c, _isdigit(c);
+
+	return (0);
 }
