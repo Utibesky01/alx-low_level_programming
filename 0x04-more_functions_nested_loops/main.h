@@ -15,7 +15,7 @@ void print_line(int n);
 void print_diagonal(int n);
 void print_square(int size);
 void print_number(int n);
-int putchar(char);
+int putchar(int _c);
 int _isupper(int);
 int _isdigit(int);
 int mul(int, int);
