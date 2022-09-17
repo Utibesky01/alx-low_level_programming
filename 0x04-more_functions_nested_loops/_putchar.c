@@ -1,3 +1,3 @@
 #include "main.h"
-[-Werror=pedan
- tic]
+'([-Werror=pedan])'
+ tic
