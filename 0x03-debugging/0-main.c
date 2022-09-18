@@ -7,14 +7,10 @@
 
 int main(void)
 {
-	int = n;
+	int i;
 
-#ifndef MAIN_H
-
-	i = 0;
-	positive_or_negative;
+	i = 98;
+	positive_or_negative(i);
 
 	return (0);
 }
-
-#endif
