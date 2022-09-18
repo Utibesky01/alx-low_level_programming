@@ -1,4 +1,5 @@
 #include "main.h"
+#ifndef MAIN_H
 
 /**
  * main - tests function that prints if integer is positive or negative
@@ -7,14 +8,12 @@
 
 int main(void)
 {
-	int = n;
+	int i;
 
 #ifndef MAIN_H
 
 	i = 0;
-	positive_or_negative;
+	positve_or_negative;
 
 	return (0);
 }
-
-#endif
