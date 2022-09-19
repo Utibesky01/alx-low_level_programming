@@ -1,17 +1,18 @@
-/*
- * file: - 0-reset_t0_98
- * Auth: utibe Edet
- */
-
 #include "main.h"
+#include <stdio.h>
 
 /**
- * reset_to_98 - Takes a pointer to an int and updates
- * the values it pointsto 98.
- * @n: the pointer to an int.
+ * main - check the code
+ *
+ * Return: Alway 0.
  */
-
-void reset_to_98(int *n)
+int main(void)
 {
-	*n = 98;
+	int n;
+
+	n = 500
+	printf("n=%d\n", n);
+	reset_to_98(&n);
+	printf("n=%d\n", n);
+	return (0);
 }
