@@ -1,18 +1,10 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - check the code
- *
- * Return: Alway 0.
+ * reset_to_98 - > a function to update the reference of a pointer
+ * @n: pointer to n to be updated
  */
 void reset_to_98(int *n)
 {
-	int n;
-
-	n = 402
-	printf("n=%d\n", n);
-	reset_to_98(&n);
-	printf("n=%d\n", n);
-	return (0);
+	*n = 98;
 }
