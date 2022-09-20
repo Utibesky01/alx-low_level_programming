@@ -1,14 +1,16 @@
 #include "main.h"
+#define MAIN_H
 #include <stdio.h>
 
 /**
- * print_array - prints n elements of an 
+ * print_array - print n element of  
  * array of integers
  * @: pointer to array
  * @n: Number of array elements.
  *
  * Return: void
  */
+
 void print_array(int *a, int n)
 {
 	int i;
