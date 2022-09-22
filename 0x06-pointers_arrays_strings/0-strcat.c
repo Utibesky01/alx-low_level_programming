@@ -2,19 +2,23 @@
 #include <string.h>
 
 /**
- * _memset -> this memory set function
- * @s: string
- * @b: a character
- * @n: an integer
+ * _strcat -> this is a function strcat
+ * @dest: first param
+ * @src: second param
  * Return: a string
  */
-
-char *_memset(char *s, char b, unsigned int n)
+char *_strcat(char *dest, char *src)
 {
-	unsigned int a;
+	int len = 0, i;
 
-	for (a = 0; a < n; a++)
-		s[a] = b;
+	while (dest[len])
+		len++;
 
-	return (s);
+	for (i = 0; src[i] != 0; i++)
+	{
+		dest[len] = src[i];
+		len += 1;
+	}
+	dest[len] = '\0';
+	return (dest);
 }
