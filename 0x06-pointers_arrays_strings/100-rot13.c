@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rot13 - converts string to  leet
+ * rot13 - converts string to leet
  *
  * @c: character string pointer
  * Return: char pointer
