@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * rot13 - converts string to leet
+ * rot13 - function tht encodes a string
  *
- * @s: character string pointer
+ * @s: string
  * Return: Always 0.
  */
 char *rot13(char *s)
@@ -15,7 +15,7 @@ char *rot13(char *s)
 	{
 		while ((s[a] >= 'a' && s[a] <= 'z') || (s[a] >= 'A' && s[a] <= 'Z'))
 		{
-			if ((s[a] >= 'a' && s[a] <= 'z') || (s[a] > 'M' && s[a] <= 'Z'))
+			if ((s[a] > 'm' && s[a] <= 'z') || (s[a] > 'M' && s[a] <= 'Z'))
 			{
 				s[a] -= 13;
 				break;
