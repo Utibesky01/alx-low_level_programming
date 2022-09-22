@@ -1,9 +1,11 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * leet -> a leet function
- * @c: param x
- * Return: a string
+ * leet -> converts strings to leet
+ *
+ * @c: character string pointer
+ * Return: char pointer
  */
 char *leet(char *c)
 {
@@ -18,7 +20,7 @@ char *leet(char *c)
 		{
 			if (c[i] == a[j] || c[i] == b[j])
 				c[i] = leet[j];
-			b++;
+			j++;
 		}
 		i++;
 
