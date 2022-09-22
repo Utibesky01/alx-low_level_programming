@@ -4,25 +4,29 @@
 /**
  * rot13 - converts string to leet
  *
- * @c: character string pointer
- * Return: char pointer
+ * @s: character string pointer
+ * Return: Always 0.
  */
-char *rot13(char *c)
+char *rot13(char *s)
 {
-	int i, j;
-	char rot_13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxwyzabcdefghijklm",
-	     alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	int a = 0;
 
-	for (i = 0; c[i] != '\0'; i++)
+	while (s[a])
 	{
-		for (j = 0; j < 52; j++)
+		while ((s[a] >= 'a' && s[a] <= 'z') || (s[a] >= 'A' && s[a] <= 'Z'))
 		{
-			if (alphabet[j] == c[i])
+			if ((s[a] >= 'a' && s[a] <= 'z') || (s[a] > 'M' && s[a] <= 'Z'))
 			{
-				c[i] = rot_13[j];
+				s[a] -= 13;
 				break;
 			}
+
+			s[a] += 13;
+			break;
 		}
+
+		a++;
 	}
-	return (c);
+
+	return (s);
 }
