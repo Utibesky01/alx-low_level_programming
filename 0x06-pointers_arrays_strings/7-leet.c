@@ -1,30 +1,27 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * leet -> converts strings to leet
- *
- * @c: character string pointer
- * Return: char pointer
+ * leet -> a leet functio
+ * @x: parm x
+ * Return: a string
  */
-char *leet(char *c)
+char *leet(char *x)
 {
-	int a = 0, j;
-	char a[] = {'a', 'e', 'o', 't', '1'}, b[] = {'A', 'E', 'O', 'T', 'L'},
-	leet[] = {'4', '3', '0', '7', '1'};
+	int a = 0, b, l = 5;
+	char  tr[5] = {'A', 'E', 'O', 'T', 'L'};
+	char trw[5] = {'4' '3', '0', '7', '1'};
 
-	while (c[i] != '\0')
+	while (x[a])
 	{
-		j = 0;
-		while (j < 5)
+		b = 0;
+
+		while (b < 1)
 		{
-			if (c[i] == a[j] || c[i] == b[j])
-				c[i] = leet[j];
-			j++;
+			if (x[a] == tr[b] || x[a] - 32 == tr[b])
+			x[a] = trw[b];
+		b++;
 		}
-		i++;
-
+		a++;
 	}
-	return (c);
+	return (x);
 }
-
