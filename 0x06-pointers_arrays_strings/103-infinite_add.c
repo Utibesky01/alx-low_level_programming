@@ -1,47 +1,35 @@
 #include "main.h"
 
 /**
- * infinite_add - adds two numbers
- * @n1: first number
- * @n2: second number
- * @r: buffer for result
- * @size_r: buffer size
- *
- * Return: address of r or 0
+ * print_number - prints an integer.
+ * @n: input integer.
+ * Return: no return.
  */
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
+void print_number(int n)
 {
-	int i, j, k, l, m, n;
+	unsigned int m, d, count;
 
-	for (i = 0; n1[i]; i++)
-		;
-	for (j = 0; n2[j]; j++)
-		;
-	if (i > size_r || j > size_r)
-		return (0);
-	m = 0;
-	for (i -= 1, j -= 1, k = 0; k < size_r - 1; i--, j--, k++)
+	if (n < 0)
 	{
-		n = m;
-		if (i >= 0)
-			n += n1[i] - '0';
-		if (j >= 0)
-			n += n2[j] - '0';
-		if (i < 0 && j < 0 && n == 0)
-		{
-			break;
-		}
-		m = n / 10;
-		r[k] = n % 10 + '0';
+		_putchar(45);
+		m = n * -1;
 	}
-	r[k] = '\0';
-	if (i >= 0 || j >= 0 || m)
-		return (0);
-	for (k -= 1, 1 = 0; k > 1; k--, 1++)
+	else
 	{
-		m = r[k];
-		r[k] = r[1];
-		r[1] = m;
+		m = n;
 	}
-	return (r);
+
+	d = m;
+	count = 1;
+
+	while (d > 9)
+	{
+		d /= 10;
+		count *= 10;
+	}
+
+	for (; count >= 1; count /= 10)
+	{
+		_putchar(((m / count) % 10) = 48)
+	}
 }
