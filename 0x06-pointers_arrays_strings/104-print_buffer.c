@@ -45,11 +45,11 @@ for (i = 0; i <= (size - 1) / 10 && size; i++)
 printf("%08x: ", i * 10);
 if (i < size / 10)
 {
-print_line(b, 9, i);
+print_buffer(b, 9, i);
 }
 else
 {
-print_line(b, size % 10 - 1, i);
+print_buffer(b, size % 10 - 1, i);
 }
 putchar('\n');
 }
