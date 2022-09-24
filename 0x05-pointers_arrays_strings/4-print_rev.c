@@ -1,5 +1,5 @@
 #include "main.h"
-
+#define MAIN_H
 /**
  * print_rev -> printing a string in reverse
  * @s: the string is to be printed in rev
