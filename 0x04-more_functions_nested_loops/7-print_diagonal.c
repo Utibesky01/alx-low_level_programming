@@ -19,7 +19,6 @@ void print_diagonal(int n)
 		while (i < n)
 		{
 
-		
 			int count = 0;
 
 			_putchar('\n');
@@ -30,7 +29,7 @@ void print_diagonal(int n)
 			}
 			_putchar(92);
 			i++;
-			
+
 		}
 	}
 	_putchar('\n');
