@@ -1,36 +1,25 @@
 #include "main.h"
 
 /**
- * print_diagonal - print diagonal line using "\" character of n lenght
- * @n: lenght of the line
- *
+ * print_diagonal - print diagonal line using n times
+ * @n: times diagonal lineis printed
  * Return: void
  */
 void print_diagonal(int n)
 {
-	n = 1;
+	int i, j;
 
-	i = 92
-
-	if (n > 0)
+	for (i = 0; i < n; i++)
 	{
-		_putchar(92);
-
-		while (i < n)
+		for (j = 0; j < i; j++)
 		{
-
-			int count = 0;
-
-			_putchar('\n');
-			while (count < i)
-			{
-				_putchar(' ');
-				count++;
-			}
-			_putchar(92);
-			i++;
-
+			_putchar(' ');
 		}
+
+		_putchar(92);
+		if (i < (n - 1))
+			_putchar('\n');
+
 	}
 	_putchar('\n');
 }
