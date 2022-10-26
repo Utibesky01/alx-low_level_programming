@@ -1,38 +1,17 @@
 #include "lists.h"
-#include <string.h>
-
 /**
- * add_node_end - A function that adds a node to the end of linked list
- * @head: pointer to a list_t pointer that points to the head struct
- * @str: string to add as node
- * Return: pointer to new element of list, NULL on failure
+ * free_list - frees a list
+ * @head: head of the linked list.
+ * Return: no return.
  */
-list_t *add_node_end(list_t **head, const char *str)
+void free_list(list_t *head)
 {
-	list_t *new_node, *temp;
-	unsigned int length = 0;
+	list_t *current;
 
-	new_node = malloc(sizeof(list_t));
-	if (new_node == NULL)
-		return (NULL);
-
-	while (str[length])
-		length++;
-
-	new_node->len = length;
-	new_node->str = strdup(str);
-	if (*head == NULL)
+	while ((current = head) != NULL)
 	{
-		new_node->next = *head;
-		*head = new_node;
+		head = head->next;
+		free(current->str);
+		free(current);
 	}
-	else
-	{
-		new_node->next = NULL;
-		temp = *head;
-		while (temp->next)
-			temp = temp->next;
-		temp->next = new_node;
-	}
-	return (new_node);
 }
