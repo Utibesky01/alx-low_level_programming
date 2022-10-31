@@ -1,37 +1,40 @@
+
 #include "holberton.h"
+#include <stdlib.h>
 
 /**
- * binary_to_uint - converts a binary number to an
- * unsigned int.
- * @b: binary.
+ * read_textfile - Reads a text file and prints it to POSIX stdout.
+ * @filename: A pointer to the name of the file.
+ * @letters: The number of letters the
+ *           function should read and print.
  *
- * Return: unsigned int.
+ * Return: If the function fails or filename is NULL - 0.
+ *         O/w - the actual number of bytes the function can read and print.
  */
-unsigned int binary_to_uint(const char *b)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
-	unsigned int ui;
-	int len, base_two;
+	ssize_t o, r, w;
+	char *buffer;
 
-	if (!b)
+	if (filename == NULL)
 		return (0);
 
-	ui = 0;
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
+		return (0);
 
-	for (len = 0; b[len] != '\0'; len++)
-		;
+	o = open(filename, O_RDONLY);
+	r = read(o, buffer, letters);
+	w = write(STDOUT_FILENO, buffer, r);
 
-	for (len--, base_two = 1; len >= 0; len--, base_two *= 2)
+	if (o == -1 || r == -1 || w == -1 || w != r)
 	{
-		if (b[len] != '0' && b[len] != '1')
-		{
-			return (0);
-		}
-
-		if (b[len] & 1)
-		{
-			ui += base_two;
-		}
+		free(buffer);
+		return (0);
 	}
 
-	return (ui);
+	free(buffer);
+	close(o);
+
+	return (w);
 }
