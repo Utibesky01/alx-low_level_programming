@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 void closer(int arg_files);
 /**
  * main - Entry Point
