@@ -9,6 +9,7 @@
  * Return: Always EXIT_SUCCESS.
  */
 int main(void)
+void hash_table_print(const hash_table_t *ht);
 {
     hash_table_t *ht;
 
